@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.visible-s-track > button > .material-icons {
+  font-size: 20px;
+  color: #ffffff55;
+}
+button {
+  background-color: transparent;
+  border: none;
+}
+.play-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.visible-s-track {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 24px;
+  max-height: 900px;
+  background-color: #2d303e;
+  color: #fff;
+  font-family: Roboto;
+  align-items: center;
+  border-color: transparent;
+  border-bottom: 1px solid #6d6c70;
+  max-width: 700px;
+}
+.image {
+  width: 60px;
+  height: 60px;
+  border: 0.5px solid #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
