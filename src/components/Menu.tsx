@@ -1,27 +1,71 @@
 import { ITrack } from "../interfaces";
-import "./Menu.css";
-interface IMenuProps {
-  tracks: ITrack[];
-}
-function Menu({ tracks}: IMenuProps) {
+import Element from "./Element"
+const tracks: ITrack[] = [
+  {
+    source: "./src/assets/dancingFlameImg.jpg",
+    title: "Dancing flame",
+    artist: "christo4us",
+    id: 1,
+  },
+  {
+    source: "./src/assets/bailaImg.jpg",
+    title: "Baila",
+    artist: "Alfonso Lugo",
+    id: 2,
+  },
+  {
+    source: "./src/assets/coffeeImg.jpg",
+    title: "Evening coffee",
+    artist: "Oleg O Kachanko",
+    id: 3,
+  },
+  {
+    source: "./src/assets/CristoImg.jpg",
+    title: "Es el cristo",
+    artist: "Son by Four",
+    id: 4,
+  },
+  {
+    source: "./src/assets/evidenceImg.jpg",
+    title: "Evidence song",
+    artist: "The good Lawdz",
+    id: 5,
+  },
+  {
+    source: "./src/assets/givemetimeImg.jpg",
+    title: "Give me time",
+    artist: "The A.J Gatz project",
+    id: 6,
+  },
+  {
+    source: "./src/assets/InBetweenImg.jpg",
+    title: "In between",
+    artist: "Kinematic",
+    id: 7,
+  },
+  {
+    source: "./src/assets/PlayedImg.jpg",
+    title: "Played",
+    artist: "Niki J Crawford",
+    id: 8,
+  },
+  {
+    source: "./src/assets/PlayedImg.jpg",
+    title: "Round and round",
+    artist: "Niki J Crawford",
+    id: 9,
+  },
+  {
+    source: "./src/assets/TrueImg.jpg",
+    title: "True Moment",
+    artist: "The ARTISANS",
+    id: 10,
+  },
+];
+function Menu() {
   return (
     <div className="track-container">
-      {tracks.map((track) => {
-        return (
-          <section className="visible-s-track">
-            <section className="play-row">
-              <img className="image" src={track.source} alt="img" />
-              <div>
-                <p className="song-title">{track.title}</p>
-                <p>{track.artist}</p>
-              </div>
-            </section>
-            <button className="icon-button">
-              <i className="material-icons paused">play_circle</i>
-            </button>
-          </section>
-        );
-      })}
+          <Element tracks={tracks} paused="paused" />
     </div>
   );
 }

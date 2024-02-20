@@ -6,6 +6,10 @@
   font-size: 20px;
   color: #ffffff55;
 }
+.visible-s-track > button > .material-icons.paused {
+  font-size: 20px;
+  color: #fff;
+}
 button {
   background-color: transparent;
   border: none;
@@ -28,7 +32,7 @@ button {
   font-family: Roboto;
   align-items: center;
   border-color: transparent;
-  border-bottom: 1px solid #6d6c70;
+  border-bottom: 1px solid rgba(109, 108, 112, 0.309);
   max-width: 700px;
 }
 .image {
@@ -36,7 +40,4 @@ button {
   height: 60px;
   border: 0.5px solid #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.highlight-s-track {
-  background-color: #2d303eb9;
 }
