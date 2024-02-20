@@ -1,5 +1,6 @@
 import { ITrack } from "./interfaces";
 import Menu from "./components/Menu";
+import Navbar from "./components/Navbar";
 
 const tracks: ITrack[] = [
   {
@@ -67,6 +68,7 @@ const tracks: ITrack[] = [
 export function App() {
   return (
     <>
+      <Navbar />
       <Menu tracks={tracks} />
     </>
   );

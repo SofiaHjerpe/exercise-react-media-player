@@ -3,9 +3,9 @@ import "./Menu.css";
 interface IMenuProps {
   tracks: ITrack[];
 }
-function Menu({ tracks }: IMenuProps) {
+function Menu({ tracks}: IMenuProps) {
   return (
-    <div>
+    <div className="track-container">
       {tracks.map((track) => {
         return (
           <section className="visible-s-track">
