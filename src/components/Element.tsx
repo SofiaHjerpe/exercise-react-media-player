@@ -1,15 +1,12 @@
 import { ITrack } from "../interfaces";
-import "./Element.css"
+import "./Element.css";
 interface IElementProps {
   tracks: ITrack[];
-  paused?: string;
+  pause?: true | undefined;
 }
-function Element({ tracks, paused}: IElementProps): JSX.Element {
-   const classes= ["material-icons"];
+export function Element({ tracks, pause }: IElementProps): JSX.Element {
 
-    if(paused === "paused"){
-      classes.push("paused");
-    }
+
   return (
     <div>
       {tracks.map((track) => {
@@ -23,7 +20,7 @@ function Element({ tracks, paused}: IElementProps): JSX.Element {
               </div>
             </section>
             <button className="icon-button">
-              <i className={classes.join(" ")}>play_circle</i>
+              <span className="material-icons">play_circle</span>
             </button>
           </section>
         );
@@ -31,4 +28,3 @@ function Element({ tracks, paused}: IElementProps): JSX.Element {
     </div>
   );
 }
-export default Element;

@@ -1,10 +1,11 @@
 import { ITrack } from "../interfaces";
-import Element from "./Element"
+import { Element } from "./Element";
 const tracks: ITrack[] = [
   {
     source: "./src/assets/dancingFlameImg.jpg",
     title: "Dancing flame",
     artist: "christo4us",
+    pauseBtn: true,
     id: 1,
   },
   {
@@ -65,7 +66,7 @@ const tracks: ITrack[] = [
 function Menu() {
   return (
     <div className="track-container">
-          <Element tracks={tracks} paused="paused" />
+          <Element tracks={tracks}  pause={tracks[0].pauseBtn}/>
     </div>
   );
 }
