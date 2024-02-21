@@ -2,11 +2,8 @@ import { ITrack } from "../interfaces";
 import "./Element.css";
 interface IElementProps {
   tracks: ITrack[];
-  pause?: true | undefined;
 }
-export function Element({ tracks, pause }: IElementProps): JSX.Element {
-
-
+export function Element({ tracks }: IElementProps): JSX.Element {
   return (
     <div>
       {tracks.map((track) => {
@@ -20,7 +17,9 @@ export function Element({ tracks, pause }: IElementProps): JSX.Element {
               </div>
             </section>
             <button className="icon-button">
-              <span className="material-icons">play_circle</span>
+              <span className="material-icons">
+                {track.pauseBtn ? "pause_circle" : "play_circle"}
+              </span>
             </button>
           </section>
         );

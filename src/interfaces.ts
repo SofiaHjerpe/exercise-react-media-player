@@ -2,6 +2,6 @@ export interface ITrack {
     id: number;
     source: string;
     title: string;
-    pauseBtn?: true;
+    pauseBtn: boolean;
     artist: string;
 }
